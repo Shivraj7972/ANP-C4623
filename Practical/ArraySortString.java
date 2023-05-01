@@ -7,23 +7,31 @@ public class ArraySortString {
 
 	public static void main(String[] args)
 	{
+		//create a Scanner object to read user input
 		Scanner sc=new Scanner(System.in);
+		
+		//prompt the user to enter the number of strings
 		System.out.println("Enter the size of array:");
 		int a=sc.nextInt();
+		
+		//create an array to store the strings
 		String []arr= new String[a];
-		System.out.println("Enter the elements: ");
+		
+		//prompt the user to enter the strings
 		for(int i=0; i<a; i++)
 		{
+			System.out.println("Enter String : ");
 			arr[i]=sc.next();		
 		}
-		Arrays.sort(arr);
-		System.out.println("Sorted Array:");
-		for(String i:arr)  //for each loop it iterate i value
-		{
-			System.out.print(i+"  ");
-		}
 		
-
+		//sort the strings in alphabetical order
+		Arrays.sort(arr);
+		
+		//display the sorted strings
+		System.out.println("Sorted Array:");
+		for(String i:arr)
+		{
+			System.out.println(i+"  ");
+		}
 	}
-
 }
